@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cocktail Database</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-logo">Cocktail Database</a>
+    </header>
+    <div class="container">
+      <div class="container-header">
+        <h1>Cocktail Recipe Edit</h1>
+      </div>
+      <div class="item-form-wrapper">
+        <form action="/update/<%= item.id %>" method="post" class="label-nth">
+
+          <label for="itemName" class="form-label">カクテル名</label>
+          <input type="text" name="itemName" value="<%= item.name %>">
+          <label for="how" class="form-label how-label">技法</label>
+          <select type="text" name="how">
+            <option value="<%= item.how %>"><%= item.how %></option>
+            <option disabled>---------</option>
+            <option value="ステア">ステア</option>
+            <option value="シェイク">シェイク</option>
+            <option value="ビルド">ビルド</option>
+            <option value="ブレンド">ブレンド</option>
+          </select>
+          
+          <label for="glass" class="form-label glass-label">グラス</label>
+          <select type="text" name="glass">
+            <option value="<%= item.glass %>"><%= item.glass %></option>
+            <option disabled>---------</option>
+            <option value="12oz">12oz</option>
+            <option value="14oz">14oz</option>
+            <option value="カクテルグラス">カクテルグラス</option>
+            <option value="ビアカク">ビアカク</option>
+            <option value="16oz">16oz</option>
+            <option value="パーパス">パーパス</option>
+            <option value="フルート">フルート</option>
+            <option value="デザートワイン">デザートワイン</option>
+            <option value="ツーウォール">ツーウォール</option>
+            <option value="ロックグラス">ロックグラス</option>
+            <option value="パイント">パイント</option>
+            <option value="ホットワイン">ホットワイン</option>
+          </select>
+          <label for="base" class="form-label how-label">ベース</label>
+          <select type="text" name="base">
+            <option value="<%= item.base %>"><%= item.base %></option>
+            <option disabled>---------</option>
+            <option value="ジン">ジン</option>
+            <option value="ウォッカ">ウォッカ</option>
+            <option value="テキーラ">テキーラ</option>
+            <option value="ラム">ラム</option>
+            <option value="リキュール">リキュール</option>
+            <option value="ワイン">ワイン</option>
+            <option value="ビール">ビール</option>
+            <option value="ウィスキー">ウィスキー</option>
+            <option value="ブランデー">ブランデー</option>
+            <option value="その他">その他</option>
+            <option value="ノンアルコール">ノンアルコール</option>
+          </select>
+          <label for="recipe1" class="form-label">材料名1...分量</label>
+          <input type="text" name="recipe1" value="<%= item.recipe1 %>">
+          <label for="recipe2" class="form-label">材料名2...分量</label>
+          <input type="text" name="recipe2" value="<%= item.recipe2 %>">
+          <label for="recipe3" class="form-label">材料名3...分量</label>
+          <input type="text" name="recipe3" value="<%= item.recipe3 %>">
+          <label for="recipe4" class="form-label">材料名4...分量</label>
+          <input type="text" name="recipe4" value="<%= item.recipe4 %>">
+          <label for="recipe5" class="form-label">材料名5...分量</label>
+          <input type="text" name="recipe5" value="<%= item.recipe5 %>">
+          <label for="recipe6" class="form-label">材料名6...分量</label>
+          <input type="text" name="recipe6" value="<%= item.recipe6 %>">
+          <label for="recipe7" class="form-label">材料名7...分量</label>
+          <input type="text" name="recipe7" value="<%= item.recipe7 %>">
+          <label for="recipe8" class="form-label">材料名8...分量</label>
+          <input type="text" name="recipe8" value="<%= item.recipe8 %>">
+          <label for="recipe9" class="form-label">材料名9...分量</label>
+          <input type="text" name="recipe9" value="<%= item.recipe9 %>">
+          <label for="recipe10" class="form-label">材料名10...分量</label>
+          <input type="text" name="recipe10" value="<%= item.recipe10 %>">
+          <input type="submit" value="更新する">
+        </form>
+      </div>
+      <a href="/index" class="cancel-button">もどる</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cocktail Database</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body class="admin-body">
+    <header>
+      <a href="/" class="header-logo">Cocktail Database</a>
+      <a href="/index" class="new-button">閲覧用ページ</a>
+    </header>
+    <div class="container">
+      <div class="container-header">
+        <h1>Cocktail List</h1>
+        <div class="btn-wrapper">
+          <span class="items-length">登録レシピ数<%= items.length %>件</span>
+          <a href="/new" class="new-button">+ 新規登録</a>
+        </div>
+      </div>
+      <div class="index-table-wrapper">
+        <div class="table-head">
+          <span class="id-column">ID</span>
+          <span class="cocktail-name-admin">カクテル名</span>
+          <span class="how-column">技法</span>
+          <span class="glass-column">グラス</span>
+          <span class="base-column">ベース</span>
+          <span class="recipe-column">レシピ</span>
+        </div>
+        <ul class="table-body">
+          <% items.forEach((item) => { %>
+            <li>
+              <div class="item-data">
+                <span class="id-column"><%= item.id %></span>
+                <span class="name-column cocktail-name-admin"><%= item.name %></span>
+                <span class="how-column"><%= item.how %></span>
+                <span class="glass-column"><%= item.glass %></span>
+                <span class="base-column"><%= item.base %></span>
+                <span class="recipe-column">
+                  <% if(item.recipe1 !== '' ){ %>
+                    <%= item.recipe1; %><br>
+                  <% } %>
+                  <% if(item.recipe2 !== '' ){ %>
+                    <%= item.recipe2; %><br>
+                  <% } %>
+                  <% if(item.recipe3 !== '' ){ %>
+                    <%= item.recipe3; %><br>
+                  <% } %>
+                  <% if(item.recipe4 !== '' ){ %>
+                    <%= item.recipe4; %><br>
+                  <% } %>
+                  <% if(item.recipe5 !== '' ){ %>
+                    <%= item.recipe5; %><br>
+                  <% } %>
+                  <% if(item.recipe6 !== '' ){ %>
+                    <%= item.recipe6; %><br>
+                  <% } %>
+                  <% if(item.recipe7 !== '' ){ %>
+                    <%= item.recipe7; %><br>
+                  <% } %>
+                  <% if(item.recipe8 !== '' ){ %>
+                    <%= item.recipe8; %><br>
+                  <% } %>
+                  <% if(item.recipe9 !== '' ){ %>
+                    <%= item.recipe9; %><br>
+                  <% } %>
+                  <% if(item.recipe10 !== '' ){ %>
+                    <%= item.recipe10; %><br>
+                  <% } %>
+                </span>
+              </div>
+              <div class="item-menu">
+                <form action="/delete/<%= item.id %>" method="post">
+                  <input type="submit" value="削除">
+                </form>
+                <a href="/edit/<%= item.id %>">編集</a>
+              </div>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

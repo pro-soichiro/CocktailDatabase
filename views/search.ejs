@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cocktail Database</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-logo">Cocktail Database</a>
+    </header>
+    <div class="container">
+      <div class="container-header">
+        <h1>Cocktail検索</h1>
+      </div>
+      <div class="item-form-wrapper">
+        <form action="/results" method="post" class="label-nth">
+          <label for="base" class="form-label how-label">ベース</label>
+          <select type="text" name="base">
+            <option value="" selected>選択してください</option>
+            <option value="ジン">ジン</option>
+            <option value="ウォッカ">ウォッカ</option>
+            <option value="テキーラ">テキーラ</option>
+            <option value="ラム">ラム</option>
+            <option value="リキュール">リキュール</option>
+            <option value="ワイン">ワイン</option>
+            <option value="ビール">ビール</option>
+            <option value="ウィスキー">ウィスキー</option>
+            <option value="ブランデー">ブランデー</option>
+            <option value="その他">その他</option>
+            <option value="ノンアルコール">ノンアルコール</option>
+          </select>
+          <input type="submit" value="検索する">
+        </form>  
+      </div>
+      <a href="/index" class="cancel-button"></span>もどる</a>
+    </div>
+  </body>
+</html>
